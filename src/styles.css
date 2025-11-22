@@ -88,6 +88,7 @@ header button:hover{
   height: 80vh;
   justify-content: space-between;
   align-items: center;
+ 
 }
 
 .about_us > p{
@@ -106,6 +107,7 @@ header button:hover{
   color: white;
   background-color: black;
   padding: 0.5rem 2rem;
+  margin-left: 5vw;
 }
 
 .about_us button:hover{
