@@ -1,26 +1,30 @@
 
 import "./styles.css";
+import {loadHome} from "./home.js"
+import {loadMenu} from "./menu.js"
+import {loadAbout} from "./about-us.js"
 
-const homePage = document.querySelector("#content");
+const pageHome = document.querySelector(".page-home")
+const pageMenu = document.querySelector(".page-menu")
+const pageAbout = document.querySelector(".page-about")
+const Content = document.querySelector("#content");
 
-const title = document.createElement("h1");
-title.innerText = "Awesome Restaurant";
-const background = document.createElement("div");
-const aboutUs = document.createElement("div");
 
-const aboutUsPraragraf = document.createElement("p");
-aboutUsPraragraf.innerText = "WOW this is so Awsome like i mean REALY AWESOME SO MORE TEXT i need more text more more more okay this is good right? if you wanna continue clik Read";
-const aboutUsButton = document.createElement("button");
-aboutUsButton.innerText = "Read";
+pageHome.addEventListener("click", () => {
+  Content.innerHTML = ""
+  loadHome()
+})
 
-aboutUs.appendChild(aboutUsPraragraf)
-aboutUs.appendChild(aboutUsButton)
+pageMenu.addEventListener("click", () => {
+  Content.innerHTML = ""
+  loadMenu()
+})
 
-title.classList.add("title");
-background.classList.add("background");
-aboutUs.classList.add("about_us");
+pageAbout.addEventListener("click", () => {
+  Content.innerHTML = ""
+  loadAbout()
+})
 
-homePage.appendChild(title);
-homePage.appendChild(background);
-homePage.appendChild(aboutUs);
+loadHome()
+
 
