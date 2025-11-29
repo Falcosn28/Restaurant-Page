@@ -1,3 +1,4 @@
+import backgroundImage from "./images/background.jpg";
 
 function loadHome () {
   const content = document.querySelector("#content");
@@ -7,7 +8,8 @@ function loadHome () {
 
   const title = document.createElement("h1");
   title.innerText = "Awesome Restaurant";
-  const background = document.createElement("div");
+  const background = document.createElement("img");
+  background.src = backgroundImage;
   const aboutUs = document.createElement("div");
 
   const aboutUsPraragraf = document.createElement("p");

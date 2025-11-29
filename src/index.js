@@ -27,4 +27,3 @@ pageAbout.addEventListener("click", () => {
 
 loadHome()
 
-

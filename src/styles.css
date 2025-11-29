@@ -37,6 +37,7 @@ header{
   margin: 2rem;
   gap: 30px;
   justify-content: space-between;
+  align-items: center;
   width: 60vw;
 }
 
@@ -62,13 +63,10 @@ header button:hover{
 }
 
 .background{
-  background-image: url("./images/background.jpg");
-  background-size: cover;       
-  background-position: center;
-  background-repeat: no-repeat;
+
   width: 30vw;
   height: 100%;
-}
+} 
 
 .title{
   background-color: black;
@@ -86,27 +84,27 @@ header button:hover{
   flex-direction: column;
   width: 30vw;
   height: 80vh;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
 .about_us > p{
   text-align: center;
   font-size: 2rem;
-  margin-top: 30vh;
   margin-left: 5vw;
+  margin-top: 8rem;
 }
 
 .about_us > button {
   font-size: 2rem;
   width: 10rem;
-  margin-top: 6rem;
   border: none;
   border-radius: 10px;
   color: white;
   background-color: black;
   padding: 0.5rem 2rem;
   margin-left: 5vw;
+  margin-top: 5rem;
 }
 
 .about_us button:hover{
@@ -117,11 +115,14 @@ header button:hover{
 
 .aboutPage{
   display: flex;
-  width: 80vw;
-  height: 80vh;
+  width: 60vw;
+  height: 60vh;
   align-items: center;
-  justify-content: center;
   gap: 30px;
+  background-color: black;
+  margin-top: 2rem;
+  border-radius: 10px;
+  padding: 3rem;
 }
 
 .ownerImg{
@@ -135,16 +136,15 @@ header button:hover{
 }
 
 .ownerInfo{
-  width: 15vw;
+  width: 30vw;
   height: 50vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  text-align: center;
 }
 
 .ownerInfo p {
   font-size: 1.5rem;
-  text-align: center;
 }
 
 .ownerInfo h1 {
@@ -152,3 +152,49 @@ header button:hover{
   margin-bottom: 2rem;
 }
 
+/* pageMenu */
+
+.pageMenu{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 30rem);
+  grid-template-rows: repeat(auto-fill, auto);
+  justify-content: space-between;
+  width: 60vw;
+  gap: 80px;
+  margin-top: 2rem;
+}
+
+.pageMenu > div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+  padding: 2rem;
+  gap: 30px;
+}
+
+.pageMenu img{
+  width: 15rem;
+  height: 15rem;
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.description{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: right;
+  height: 100%;
+  width: 15rem;
+}
+
+.price{
+  font-size: 1.5rem;
+}
+
+.description h1{
+  font-family: "Momo";
+}

@@ -1,16 +1,62 @@
 
+import coffeeImg from "./images/coffee.jpg";
+import waffleImg from "./images/Waffle.jpg";
+import cakeImg from "./images/cake.jpg";
+
+const recepies = [
+  { 
+    recepiesImg: coffeeImg,
+    price: "5 eur",
+    recepiesTitle: "coffee",
+    recepiesParagraf: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, aliquid.",
+  },
+  { 
+    recepiesImg: waffleImg,
+    price: "50 eur",
+    recepiesTitle: "waffle",
+    recepiesParagraf: "Lorem ipsum dolor sit consectetur, adipisicing elit. Nulla, aliquid.",
+  },
+  { 
+    recepiesImg: cakeImg,
+    price: "8 eur",
+    recepiesTitle: "cake",
+    recepiesParagraf: "Lorem ipsum dolor sit adipisicing elit. Nulla, aliquid."
+  },
+]
+
 function loadMenu () {
   const content = document.querySelector("#content");
-
   const menuPage = document.createElement("div");
-  menuPage.classList.add("menuPage");
+  menuPage.classList.add("pageMenu");
 
-  const title = document.createElement("h1");
+  for (let i = 0; i < recepies.length; i++) {
+    
+    const recepie = document.createElement("div");
+    const description = document.createElement("div");
+    const recepieImg = document.createElement("img");
+    const descriptionTitle = document.createElement("h1");
+    const descriptionParagraf = document.createElement("p");
+    const descriptionPriece = document.createElement("p");
 
-  title.innerText = "Menu"
+    descriptionPriece.innerText = recepies[i].price;
+    recepieImg.src = recepies[i].recepiesImg;
+    descriptionTitle.innerText = recepies[i].recepiesTitle;
+    descriptionParagraf.innerText = recepies[i].recepiesParagraf;
 
-  menuPage.appendChild(title);
+    description.classList.add("description");
+    descriptionPriece.classList.add("price");
 
-  content.appendChild(menuPage)
+    description.appendChild(descriptionTitle);
+    description.appendChild(descriptionParagraf);
+    description.appendChild(descriptionPriece);
+
+
+    recepie.appendChild(recepieImg);
+    recepie.appendChild(description);
+
+    menuPage.appendChild(recepie)
+  }
+  
+  content.appendChild(menuPage);
 }
 export {loadMenu}
